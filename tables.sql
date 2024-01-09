@@ -17,8 +17,8 @@ CREATE TABLE books (
     modern_name VARCHAR(100) NOT NULL,
     new_testament TINYINT(1) NOT NULL,
     PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
+)
+;
 
 -- ------------------------------------------------------------------------------------------------------
 -- Tabla: verses
@@ -40,4 +40,4 @@ CREATE TABLE verses (
     text TEXT NOT NULL,
     PRIMARY KEY (book_id, chapter, verse),
     FOREIGN KEY (book_id) REFERENCES books (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ;
